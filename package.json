@@ -1,0 +1,14 @@
+{
+  "name": "fvtt-advanced-macros-tests",
+  "version": "1.0.0",
+  "description": "Test suite for Advanced Macros module",
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "test:validate": "node tests/validate-macros.js",
+    "test:syntax": "node tests/syntax-check.js"
+  },
+  "devDependencies": {},
+  "keywords": ["foundry", "macros", "testing"],
+  "author": "Advanced Macros Contributors",
+  "license": "MIT"
+}
