@@ -62,7 +62,7 @@ class TestRunner {
 
 // Load and parse macros
 function loadMacros() {
-  const dbPath = path.join(__dirname, '../packs/macros.db');
+  const dbPath = path.join(__dirname, '../src/packs/macros.db');
   const content = fs.readFileSync(dbPath, 'utf8');
   const lines = content.trim().split('\n');
   return lines.map((line, index) => {
@@ -100,7 +100,7 @@ const NEW_MACROS = [
 const runner = new TestRunner();
 
 runner.test('Macros database file exists and is readable', () => {
-  const dbPath = path.join(__dirname, '../packs/macros.db');
+  const dbPath = path.join(__dirname, '../src/packs/macros.db');
   if (!fs.existsSync(dbPath)) {
     throw new Error('macros.db file not found');
   }

@@ -16,7 +16,7 @@ const colors = {
 };
 
 function loadMacros() {
-  const dbPath = path.join(__dirname, '../packs/macros.db');
+  const dbPath = path.join(__dirname, '../src/packs/macros.db');
   const content = fs.readFileSync(dbPath, 'utf8');
   return content.trim().split('\n').map(line => JSON.parse(line));
 }

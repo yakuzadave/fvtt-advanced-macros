@@ -1,0 +1,77 @@
+{
+	"id": "advanced-macros",
+	"title": "Advanced Macros",
+	"description": "Call macros with arguments directly from chat and execute macros for specific users.",
+	"authors": [
+		{
+			"name": "mclemente",
+			"url": "https://github.com/mclemente",
+			"discord": "mclemente#5524",
+			"github": "mclemente"
+		}
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "languages/en.json"
+		},
+		{
+			"lang": "fr",
+			"name": "Français (French)",
+			"path": "languages/fr.json"
+		},
+		{
+			"lang": "cn",
+			"name": "中文 (Chinese)",
+			"path": "languages/cn.json"
+		},
+		{
+			"lang": "pl",
+			"name": "polski",
+			"path": "languages/pl.json"
+		},
+		{
+			"lang": "pt-BR",
+			"name": "Português (Brasil)",
+			"path": "languages/pt-BR.json"
+		},
+		{
+			"lang": "fi",
+			"name": "Suomi",
+			"path": "languages/fi.json"
+		},
+		{
+			"lang": "es",
+			"name": "Español",
+			"path": "languages/es.json"
+		},
+		{
+			"lang": "de",
+			"name": "Deutsch",
+			"path": "languages/de.json"
+		}
+	],
+	"packs": [
+		{
+			"name": "macros",
+			"label": "Advanced Macros",
+			"path": "packs/macros.db",
+			"ownership": {
+				"PLAYER": "LIMITED",
+				"ASSISTANT": "OWNER"
+			},
+			"type": "Macro"
+		}
+	],
+	"socket": true,
+	"esmodules": ["main.js"],
+	"compatibility": {
+		"minimum": 13,
+		"verified": 13
+	},
+	"url": "This is auto replaced",
+	"version": "This is auto replaced",
+	"manifest": "This is auto replaced",
+	"download": "This is auto replaced"
+}
