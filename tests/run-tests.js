@@ -26,7 +26,6 @@ const testSuites = [
   { name: 'Execution Tests', file: 'execution-tests.js' }
 ];
 
-let allPassed = true;
 const results = [];
 
 async function runTest(suite) {
@@ -58,10 +57,7 @@ async function runTest(suite) {
 
 async function runAllTests() {
   for (const suite of testSuites) {
-    const passed = await runTest(suite);
-    if (!passed) {
-      allPassed = false;
-    }
+    await runTest(suite);
   }
 
   // Print summary
@@ -76,6 +72,7 @@ async function runAllTests() {
 
   console.log();
 
+  const allPassed = results.every(r => r.passed);
   if (allPassed) {
     console.log(`${colors.bold}${colors.green}All tests passed! ✨${colors.reset}\n`);
     process.exit(0);
