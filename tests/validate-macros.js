@@ -115,7 +115,6 @@ runner.test('All macros are valid JSON (NDJSON format)', () => {
   if (macros.length === 0) {
     throw new Error('No macros found in database');
   }
-  console.log(`  Found ${macros.length} macros`);
 });
 
 runner.test('All macros have required fields', () => {
@@ -309,7 +308,10 @@ runner.test('Total macro count is correct', () => {
     throw new Error(`Expected at least ${expectedMin} macros, found ${macros.length}`);
   }
 
-  console.log(`  Total macros: ${macros.length} (${macros.length - 17} new macros)`);
+  const newMacroCount = macros.filter(m => NEW_MACROS.includes(m.name)).length;
+  if (newMacroCount < 13) {
+    throw new Error(`Expected 13 new macros, found only ${newMacroCount}`);
+  }
 });
 
 // Run all tests
